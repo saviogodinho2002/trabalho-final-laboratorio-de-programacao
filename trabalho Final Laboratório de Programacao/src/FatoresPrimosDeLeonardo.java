@@ -30,10 +30,7 @@ public class FatoresPrimosDeLeonardo {
 				tempMultply *= i;
 
 				if (tempMultply <= value) {
-					multiplyOfPrimos = tempMultply;
-					
-					if (i != 1)
-						listOfPrimos.add(i);
+					listOfPrimos.add(i);
 				}
 
 			}
