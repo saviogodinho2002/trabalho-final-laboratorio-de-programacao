@@ -36,7 +36,7 @@ public class Main {
 		a = new Jarro(maxLitersA);
 		b = new Jarro(maxLitersB);
 		
-		if(n%2!=0 || (n > maxLitersA && n > maxLitersB) ) { 
+		if(n%2!=0 || (n > maxLitersA) ) { 
 			System.out.println("SEM SOLUÇÃO");
 			return;
 		}
