@@ -56,7 +56,7 @@ public class PrimeiraQuestao {
 	private static void mergeArray(List<Integer> list, int multiple){
 		List<Integer> metade1 =  new ArrayList<Integer>((list.size()/2));
 		List<Integer> metade2 = new ArrayList<Integer>( (list.size()-(list.size()/2)));;	
-		for (int i = 0; i < (list.size()/2)-1; i++) {
+		for (int i = 0; i < (list.size()/2); i++) {
 			metade1.add(list.get(i));
 			metade2.add(list.get((list.size()-(list.size()/2))+i ));
 		}
