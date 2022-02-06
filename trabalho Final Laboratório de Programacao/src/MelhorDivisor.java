@@ -12,13 +12,14 @@ public class MelhorDivisor {
 		
 	}
 	public static int getDivisor(int num) {
-		int sumNum =num%10 + num/10;
+		
+		int sumNum = getSum(num);
 		int i = 0;
 		int best = num;
 		int bestSum = sumNum;
 		do {		
 			i++;
-			int sumI= (i/10)+i%10;					
+			int sumI= getSum(i);	
 			if(num%i==0 && (sumI >= bestSum)) {	
 				
 				best = sumI == bestSum && best<i?
@@ -32,6 +33,15 @@ public class MelhorDivisor {
 		}while( (num/i != 2) && (i != num) );
 		return best;
 	}
+	public static int getSum(int num ) {
+		int sum = 0;	
+		while(num != 0) {
+			sum += num%10;
+			num /= 10;
+		}
+		return sum;
+	}
+	
 	
 	
 }
