@@ -8,7 +8,7 @@ public class FatoresPrimosDeLeonardo {
 		long value = input.nextLong();
 
 		System.out.println(getFactPrimos(value));
-
+		
 	}
 
 	private static List<Integer> getFactPrimos(long value) {
@@ -19,17 +19,17 @@ public class FatoresPrimosDeLeonardo {
 			return listOfPrimos;
 		}
 		
-		long multiplyOfPrimos = 1;
 		int i = 1;
+		
 		long tempMultply = 1;
 
 		while (tempMultply <= value) {
-
 			i++;
-			if ((i == 2 || i == 3 || i == 5 || i == 7) || (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0)) {
+			int sumNum = getSum(i);
+			if ((i == 2 || i == 3 || i == 5 || i == 7) || (i % 2 != 0 && sumNum % 3 != 0 && i % 5 != 0 && i % 7 != 0)) {
 				tempMultply *= i;
-
-				if (tempMultply <= value) {
+				
+				if (tempMultply <= value) {						
 					listOfPrimos.add(i);
 				}
 
@@ -38,6 +38,14 @@ public class FatoresPrimosDeLeonardo {
 		}
 
 		return listOfPrimos;
+	}
+	public static int getSum(int num ) {
+		int sum = 0;	
+		while(num != 0) {
+			sum += num%10;
+			num /= 10;
+		}
+		return sum;
 	}
 
 }
